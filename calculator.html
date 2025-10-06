@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title></title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+      <style>
+
+        body{
+          display:flex;
+          justify-content:center;
+          background-color: black;
+        }
+        
+        .calculator{
+          margin-top:20px;
+          padding-top:2px;
+          padding-bottom:5px;
+          width:400px;
+          height:500px;
+          background-color: #242124;
+          border-width:1px;
+          border-color:white;
+          border-radius:25px;          
+        }
+
+        .row-1,.row-2,.row-3,.row-4,.row-5{
+          margin-top:10px;
+          padding-left:10px;
+          padding-right:10px;
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          padding-top:2px;
+        }
+
+        .box{
+          margin:auto;
+          padding-top:5px;
+          padding-left:10px;
+          padding-right:10px;
+          padding-bottom:5px;
+          width:85px;
+          height:85px;
+          font-size:50px;
+          font-weight:bold;
+          background-color:rgb(228, 226, 226);
+          border:none;
+          color:#353839;
+          border-radius:100%;
+        }
+
+        .box:hover{
+          opacity:0.75;
+        }
+
+        .-box{
+          margin:auto;
+          padding-top:5px;
+          padding-left:10px;
+          padding-right:10px;
+          padding-bottom:5px;
+          font-size:50px;
+          font-weight:bold;
+          width:85px;
+          height:85px;
+          background-color: grey;
+          border:none;
+          color:black;
+          border-radius:100%;
+        }
+
+        .-box:hover{
+          opacity:0.75;
+        }
+
+        .-box-{
+          margin:auto;
+          padding-top:5px;
+          padding-left:10px;
+          padding-right:10px;
+          padding-bottom:5px;
+          font-size:50px;
+          font-weight:bold;
+          width:85px;
+          height:85px;
+          background-color: #6F00FF;
+          border:none;
+          color:white;
+          border-radius:100%;
+        }
+
+        .-box-:hover{
+          opacity:0.75;
+        }
+
+        .special-box{
+          margin:auto;
+          padding-top:5px;
+          padding-left:10px;
+          padding-right:10px;
+          padding-bottom:5px;
+          font-size:50px;
+          font-weight:bold;
+          width:85px;
+          height:85px;
+          background: linear-gradient(blue,violet,purple);
+          border:none;
+          color:white;
+          border-radius:100%;
+        }
+
+        .special-box:hover{
+          opacity:0.75;
+        }
+
+      </style>
+      
+      <div class="calculator">
+        <div class="row-1">
+          <button class="-box"  onclick = " calculation = ' ';  console.log(`Calculation terminated...  ${calculation}`); ">A</button>
+          <button class="-box"  onclick = " calculation += ' ( ';  console.log(calculation); ">(</button>
+          <button class="-box"  onclick = " calculation += ' ) ';  console.log(calculation); ">)</button>
+          <button class="-box-"  onclick = " calculation += ' + ';  console.log(calculation); ">+</button>
+        </div>
+
+        <div class="row-2">
+          <button class="box"  onclick = " calculation += '1';  console.log(calculation); ">1</button>
+          <button class="box"  onclick = " calculation += '2';  console.log(calculation); ">2</button>
+          <button class="box"  onclick = " calculation += '3';  console.log(calculation); ">3</button>
+          <button class="-box-"  onclick = " calculation += ' - ';  console.log(calculation); ">-</button>
+        </div>
+
+        <div class="row-3">
+          <button class="box"  onclick = " calculation += '4';  console.log(calculation); ">4</button>
+          <button class="box"  onclick = " calculation += '5';  console.log(calculation); ">5</button>
+          <button class="box"  onclick = " calculation += '6';  console.log(calculation); ">6</button>
+          <button class="-box-"  onclick = " calculation += '*';  console.log(calculation); ">*</button>
+        </div>
+
+        <div class="row-4">
+          <button class="box"  onclick = " calculation += '7';  console.log(calculation); ">7</button>
+          <button class="box"  onclick = " calculation += '8';  console.log(calculation); ">8</button>
+          <button class="box"  onclick = " calculation += '9';  console.log(calculation); ">9</button>
+          <button class="-box-"  onclick = " calculation += '/';  console.log(calculation); ">/</button>
+        </div>
+
+        <div class="row-5">
+          <button class="box"  onclick = " calculation -= '1';  console.log(calculation); ">C</button>
+          <button class="box"  onclick = " calculation += '0';  console.log(calculation); ">0</button>
+          <button class="box"  onclick = " calculation += '.';  console.log(calculation); ">.</button>
+          <button class="special-box"  onclick = " calculation = eval(calculation);  console.log(calculation); ">=</button>
+        </div>
+
+      </div>
+      <script>
+        let calculation = " ";
+      </script>
+    </body>
+</html>
